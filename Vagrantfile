@@ -2,8 +2,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "open5gs-compose"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = 8192
-    vb.cpus = 4
+    vb.memory = 16384
+    vb.cpus = 16
   end
 
   config.vm.hostname = "open5gs"
