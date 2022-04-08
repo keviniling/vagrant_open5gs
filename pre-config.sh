@@ -8,11 +8,11 @@ function logerr {
 	echo -e "[ERRO] $1"
 }
 
-FREE5GC_COMPOSE_REPO='https://github.com/free5gc/free5gc-compose.git'
+OPEN5GS_COMPOSE_REPO='git@github.com:keviniling/customized_open5gs.git'
 DOCKER_COMPOSE_VERSION='1.29.2'
 VAGRANT_UID='1000'
 SYNCED_FOLDER='/vagrant'
-WORKSPACE='free5gc-compose'
+WORKSPACE='open5gs-compose'
 
 log "Start pre-config script"
 
@@ -76,7 +76,12 @@ docker-compose --version
 
 mkdir -p $SYNCED_FOLDER/$WORKSPACE
 
-log "Git clone free5gc-compose project"
-git clone $FREE5GC_COMPOSE_REPO $SYNCED_FOLDER/$WORKSPACE
+log "Git clone customized_open5gs project(private)"
+# git clone $FREE5GC_COMPOSE_REPO $SYNCED_FOLDER/$WORKSPACE
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+ssh -T git@github.com
+git clone $OPEN5GS_COMPOSE_REPO
 
 log "End pre-config script. Reload the box.."

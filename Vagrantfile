@@ -1,13 +1,14 @@
 Vagrant.configure("2") do |config|
-  config.vm.define "free5gc-compose"
+  config.vm.define "open5gs-compose"
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = 8192
     vb.cpus = 4
   end
 
-  config.vm.hostname = "free5gc"
+  config.vm.hostname = "open5gs"
   config.vm.box = "ubuntu/bionic64"
+  config.ssh.forward_agent = true
   config.vm.network "forwarded_port", guest: 5000, host: 5000
   config.vm.synced_folder "shared", "/vagrant", disabled: false
   
