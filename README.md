@@ -34,3 +34,7 @@ vb.cpus = <number of cpus>
 ```console
 vagrant up
 ```
+
+## Problem
+
+Vagrant may not clone the repo correctly because it is a priave repo, just clone [it](https://github.com/keviniling/customized_open5gs) mannually after the vagrant box set up.
