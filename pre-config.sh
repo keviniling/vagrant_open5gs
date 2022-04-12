@@ -12,7 +12,7 @@ OPEN5GS_COMPOSE_REPO='git@github.com:keviniling/customized_open5gs.git'
 DOCKER_COMPOSE_VERSION='1.29.2'
 VAGRANT_UID='1000'
 SYNCED_FOLDER='/vagrant'
-WORKSPACE='open5gs-compose'
+WORKSPACE='customized_open5gs-compose'
 
 log "Start pre-config script"
 
