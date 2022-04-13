@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "open5gs"
   config.vm.box = "ubuntu/bionic64"
   config.ssh.forward_agent = true
-  config.vm.network "forwarded_port", guest: 3000, host: 5000
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.synced_folder "shared", "/vagrant", disabled: false
   
   config.vm.provision "shell", path: "pre-config.sh"
