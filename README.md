@@ -1,4 +1,4 @@
-# Vagrantbox for free5gc-compose
+# Vagrantbox for customized_open5gs
 
 ## Prerequisites
 
