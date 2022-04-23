@@ -10,7 +10,9 @@ You can install vagrant by following the steps provided here: https://www.vagran
 
 Please update the provider in the `Vagrantfile` with your favorite one.
 
-For the Virtualbox provider you need to install virtualbox on your machine. Please follow install steps here: https://www.virtualbox.org/wiki/Linux_Downloads
+For the Virtualbox provider you need to install virtualbox on your machine(Ubuntu). Please follow install steps here: https://www.virtualbox.org/wiki/Linux_Downloads
+
+For mac users, look [here](https://sourabhbajaj.com/mac-setup/Vagrant/README.html)
 
 
 ### Vagrant additional plugins
